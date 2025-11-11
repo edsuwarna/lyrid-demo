@@ -1,0 +1,36 @@
+# Lyrid Project Definition
+# This file defines the configuration for your Lyrid project
+# Structure matches: https://github.com/LyridInc/go-sdk/blob/master/model/app.go
+
+name: demo-apps
+description: demo-apps
+ignoreFiles: .git .idea .vscode
+modules:
+  - id: ''
+    name: demo-apps
+    language: docker
+    description: demo-apps
+    web: ''
+    buildStep: ''
+    hidePublicURL: false
+    projectFolder: ''
+    prebuildScript: ''
+    config:
+      instance: ''
+      regionId: ''
+      distributed: false
+    functions:
+      - name: demo-apps
+        entry: ''
+        description: 'demo-apps'
+    ports:
+      - alias: http
+        port: 80
+        useProbe: true
+    resources:
+      cpu: ''
+      memory: ''
+    customLabels: []
+spec:
+  - replica: '1'
+operator: false

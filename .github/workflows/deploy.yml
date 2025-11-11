@@ -11,14 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install lc and code submit
-      env:
-        LYRID_ACCESS_KEY: ${{ secrets.LYRID_ACCESS_KEY }}
-        LYRID_SECRET_KEY: ${{ secrets.LYRID_SECRET_KEY }}
       run: |
         wget https://api.lyrid.io/client/dl/linux
         ls -A
         mv linux lc
         chmod u+x lc
-        ./lc config add --config lyrid-test --key "$LYRID_ACCESS_KEY" --secret "$LYRID_SECRET_KEY"
-        ./lc code submit -i RxGCBBMeH2
-        sleep 50
+        ./lc config add --config bahtera --key ${{secrets.ACCESS_KEY}} --secret ${{secrets.SECRET_KEY}}
+        ./lc code submit -i RxGCBBMeH2 --no-wait
+        sleep 10

@@ -16,6 +16,6 @@ jobs:
         ls -A
         mv linux lc
         chmod u+x lc
-        ./lc config add --config lyrid-test --key <ACCESS_KEY> --secret <SECRET_KEY>
+        ./lc config add --config lyrid-test --key ${{ secrets.LYRID_ACCESS_KEY }} --secret ${{ secrets.LYRID_SECRET_KEY }}
         ./lc code submit -i RxGCBBMeH2
         sleep 50

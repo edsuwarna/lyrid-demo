@@ -12,8 +12,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install lc and code submit
       run: |
-        #!/bin/bash
-        sudo -i
         wget https://api.lyrid.io/client/dl/linux
         ls -A
         mv linux lc

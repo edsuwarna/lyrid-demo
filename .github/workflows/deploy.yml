@@ -16,6 +16,6 @@ jobs:
         ls -A
         mv linux lc
         chmod u+x lc
-        ./lc config add --config bahtera --key ${{secrets.ACCESS_KEY}} --secret ${{secrets.SECRET_KEY}}
-        ./lc code submit -i RxGCBBMeH2 --no-wait
+        ./lc config add --config devops-lab --key ${{secrets.ACCESS_KEY}} --secret ${{secrets.SECRET_KEY}}
+        ./lc code submit -i o5i7AJpmEe --no-wait
         sleep 10
